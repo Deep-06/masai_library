@@ -15,7 +15,7 @@ bookRouter.post("/post", auth, async (req, res) => {
     }
 })
 
-bookRouter.get("/",auth,  async (req, res) => {
+bookRouter.get("/",  async (req, res) => {
     try {
         const book = await BookModel.find()
         res.status(200).send(book)
